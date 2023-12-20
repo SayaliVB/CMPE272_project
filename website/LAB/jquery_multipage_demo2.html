@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Page Demo</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+<!-- buttons doc are under http://demos.jquerymobile.com/1.2.0/docs/toolbars/docs-headers.html -->
+    <div data-role="page" id="firstPage">
+        <div data-role="header">
+            <h1>First Page Title</h1>
+        </div>
+        <div data-role="content">
+            <a href="#secondPage">Click to second Page</a>
+        </div>
+        <div data-role="footer">
+            Footer of first page
+        </div>
+    </div>
+    <div data-role="page" id="secondPage">
+        <div data-role="header">
+        	<h1>Second Page Header</h1>
+        </div>
+        <div data-role="content">
+            <a href="#thirdPage">Click to Third Page</a>
+        </div>
+        <div data-role="footer">
+            Footer of second page
+        </div>
+    </div>
+    <div data-role="page" id="thirdPage">
+        <div data-role="header">
+        	<a href="#firstPage" data-icon="delete">First</a>
+        	<h1>Third Page Header</h1>
+            <a href="#secondPage" data-icon="check">Middle</a>
+        </div>
+        <div data-role="content">
+            <a href="#firstPage">Click to first Page</a>
+        </div>
+        <div data-role="footer">
+            Footer of Third page
+        </div>
+    </div>
+
+</html>

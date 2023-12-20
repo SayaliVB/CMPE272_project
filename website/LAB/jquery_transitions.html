@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transitions</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+    
+</head>
+<body>
+    <div data-role="page" id="firstPage">
+        <div data-role="header">
+            <h1>My Page</h1>
+        </div>
+        <div data-role="content">
+            <h1>Page Transitions</h1>
+            <ul data-role="listview">
+                <li><a href="#gotopage" data-transition="fade" data-inline="true">fade</a> </li>
+                <li><a href="#gotopage" data-transition="pop">pop</a> </li>
+                <li><a href="#gotopage" data-transition="flip">flip</a> </li>
+                <li><a href="#gotopage" data-transition="turn">turn</a> </li>
+                <li><a href="#gotopage" data-transition="flow">flow</a> </li>
+                <li><a href="#gotopage" data-transition="slidefade">slidefade</a> </li>
+                <li><a href="#gotopage" data-transition="slide">slide</a> </li>
+                <li><a href="#gotopage" data-transition="slideup">slide up</a> </li>
+                <li><a href="#gotopage" data-transition="slidedown">slide down</a> </li>
+                <li><a href="#gotopage" data-transition="none">none</a> </li>
+            </ul>
+            <h1>Dialog Transitions</h1>
+            <ul data-role="listview">
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="fade" data-inline="true">fade</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="pop">pop</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="flip">flip</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="turn">turn</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="flow">flow</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="slidefade">slidefade</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="slide">slide</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="slideup">slide up</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="slidedown">slide down</a> </li>
+                <li><a href="#gotodialog" data-rel="dialog" data-transition="none">none</a> </li>
+            </ul>
+        </div>
+        <div data-role="footer">
+            <h1>My Page Footer</h1>
+        </div>
+    </div>
+    
+    <div data-role="page" id="gotopage">
+        <div data-role="header">
+            <a href="#firstPage" data-icon="delete">Go Back</a>
+            <h1>My Goto Page</h1>
+        </div>
+        <div data-role="content">
+            You just did a page transition. 
+        </div>
+        <div data-role="footer">
+            Goto Page Footer
+        </div>
+    </div>
+    
+    <div data-role="page" id="gotodialog">
+        <div data-role="header">
+            <a href="#firstPage" data-icon="delete">Go Back</a>        
+            <h1>My Goto Dialog Page</h1>
+        </div>
+        <div data-role="content">
+            You just did a page transition to dialog. 
+        </div>
+        <div data-role="footer">
+            Goto Page Footer
+        </div>
+    </div>
+	
+</body>
+</html>

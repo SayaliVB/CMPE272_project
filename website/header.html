@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blend Station</title>
+    <link rel="stylesheet" href="css1/loginstyle.css" />
+    <link rel="stylesheet" href="css1/style.css" />
+    <link rel="icon" href="/images/letterT.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/scripts/rating.js"></script>
+    <script>
+      window.addEventListener('message', function(event) {
+          if(event?.data?.type === 'login'){
+              localStorage.setItem("userId", event?.data.user_id)
+          }
+          if(event?.data?.type === 'logout'){
+              localStorage.removeItem("userId", event?.data.user_id);
+          }
+      });
+      if(localStorage.getItem('userId')){
+          document.cookie = `userid=${localStorage.getItem('userId')};path=/;SameSite=None;Secure;expires=Fri, 31 Dec 9999 23:59:59 GMT`
+      }
+      if(!localStorage.getItem('userId')){
+          document.cookie = `userid=gi;path=/;SameSite=None;Secure;expires=Fri, 31 Dec 1999 23:59:59 GMT`
+      }
+  </script>
+  </head>
+  <body>
+
+<div class="bg-img">
+    <div class="container">
+      <a href="index.php">
+      <img src = "/images/letterT.png" style="width:180px;height:120px;"/>
+     </a>
+    </div>
+    <div class="topnav">
+          <a href="about.php">About</a>
+          <a href="products.php">Products</a>
+          <a href="cart.php">View Cart</a>
+          <a href="orders.php">My Orders</a>
+          <a href="contact.php">Contact</a>
+          <a href="news.php">News</a>
+          <a href="viewlist.php">View User List</a>
+          <a href="user.php">User Section</a>
+      </div>
+  </div>

@@ -1,0 +1,276 @@
+
+<html>
+
+<head>
+	<title>Multi-page template</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<style>
+		.popup{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$("#pizza").click(function(){
+				if(localStorage.getItem("pizza") === null){
+					localStorage.setItem("pizza", 1);
+				}
+				else{
+					localStorage.setItem("pizza", localStorage.getItem("pizza")+1);
+				}
+			});
+			$("#barbeque").click(function(){
+				if(localStorage.getItem("barbeque") === null){
+					localStorage.setItem("barbeque", 1);
+				}
+				else{
+					localStorage.setItem("barbeque", localStorage.getItem("barbeque")+1);
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+<!-- Start of first page: #start -->
+<div data-role="page" id="start">
+
+	<div data-role="header">
+		<h1>Food Voting</h1>
+	</div>
+
+	<div role="main" class="ui-content popup" >
+		<h2>Start Voting</h2>
+		<p><a href="#one" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Start voting</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="a">
+		<h4>Copywrite</h4>
+	</div>
+</div>
+
+<!-- Start of popup page: #one -->
+<div data-role="page" id="one" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Pizza</h2>
+			<img src ="food/pizza.jpeg" width ="300px" height="300px"/>
+		</div>
+		
+        <div>
+            <a href="#two" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a id ="pizza" href="#two" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p>You've decides to eat: </p>
+		<p id = "eat"></p>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #two -->
+<div data-role="page" id="two" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Barbeque</h2>
+			<img src ="food/barbeque.jpeg" width ="300px" height="300px"/>
+		</div>
+		
+        <div>
+            <a href="#three" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a id ="barbeque" href="#three" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #three -->
+<div data-role="page" id="three" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Biryani</h2>
+			<img src ="food/biryani.jpeg" width ="300px" height="300px"/>
+		</div>
+        <div>
+            <a href="#four" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a href="#four" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #four -->
+<div data-role="page" id="four" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Cake</h2>
+			<img src ="food/cake.jpeg" width ="300px" height="300px"/>
+		</div>
+        <div>
+            <a href="#five" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a href="#five" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #five -->
+<div data-role="page" id="five" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Chocolate</h2>
+			<img src ="food/chocolate.jpeg" width ="300px" height="300px"/>
+		</div>
+        <div>
+            <a href="#six" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a href="#six" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #six -->
+<div data-role="page" id="six" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Ice Cream</h2>
+			<img src ="food/ice_cream.jpeg" width ="300px" height="300px"/>
+		</div>
+		
+        <div>
+            <a href="#seven" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a href="#seven" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #seven -->
+<div data-role="page" id="seven" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Ramen</h2>
+			<img src ="food/ramen.jpeg" width ="300px" height="300px"/>
+		</div>
+		
+        <div>
+            <a href="#eight" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a href="#eight" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #eight -->
+<div data-role="page" id="eight" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Sushi</h2>
+			<img src ="food/sushi.jpeg" width ="300px" height="300px"/>
+		</div>
+		
+        <div>
+            <a href="#nine" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a href="#nine" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #nine -->
+<div data-role="page" id="nine" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Tacos</h2>
+			<img src ="food/tacos.jpeg" width ="300px" height="300px"/>
+		</div>
+		
+        <div>
+            <a href="#ten" data-icon="delete" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Spit</a>
+            <a href="#ten" data-icon="check" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Eat</a>
+        </div>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+<!-- Start of popup page: #ten -->
+<div data-role="page" id="ten" data-close-btn="none">
+
+	<div data-role="header" data-theme="b">
+		<h1>Eat or Spit?</h1>
+	</div>
+
+	<div role="main" class="ui-content popup">
+		<div class="popup">
+			<h2>Wings</h2>
+			<img src ="food/wings.jpeg" width ="300px" height="300px"/>
+		</div>
+		
+        <p>Those were amazing choices! Thanks for playing. Happy eating:) </p>
+		<p><a href="#start" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to start</a></p>
+	</div>
+
+</div>
+
+</body>
+</html>

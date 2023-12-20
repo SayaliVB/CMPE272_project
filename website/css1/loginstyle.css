@@ -1,0 +1,71 @@
+
+.list {
+  width: 800px;
+  background:white;
+  box-shadow:2px 2px 2px 2px black;
+  margin-left: 25%;
+}
+
+.otheruserlist-container{
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr;
+  gap: 2rem;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.otheruserlist {
+  width: 300px;
+  background:rgb(236, 219, 246);
+  margin-left: 10%;
+  border-radius: 25px;
+  text-align: center;
+  font-size:large ;
+}
+
+.otheruserlist:hover {
+  background-color: aliceblue;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+}
+
+.head h1 {
+  padding: 5px 20px;
+  margin: 15px;
+  margin-bottom:1px;
+  color:black;
+  font-weight: 1000;
+  font-size: 30px;
+  font-family: Georgia, Helvetica, sans-serif;
+}
+.head{
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+ul{
+  padding-left:10px;
+  margin-right:5px;
+}
+ul li {
+  padding: 10px;
+  margin-left:15px;
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+ul li:hover {
+  background:rgb(183, 235, 238);
+}
+
+ul li i {
+  font-size: 25px;
+  font-weight: bold;
+
+}
+.head hr {
+  width: 20%;
+  margin-left:32px;
+  border: 1px solid #0B5AA2;
+}
